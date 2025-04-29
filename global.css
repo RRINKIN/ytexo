@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Webfont Luciole (French for “firefly”) is a new typeface developed explicitly for visually impaired people. 
+The result of a two-year collaboration between the Centre Technique Régional pour la Déficience Visuelle (the Regional Technical Center for Visual Impairment) 
+and the type-design studio typographies.fr, this project received a grant from the Swiss Ceres Foundation 
+and support from the DIPHE laboratory at the Université Lumière Lyon 2. https://www.luciole-vision.com/*/
+@font-face {
+  font-family: 'Luciole';
+  src: local("Luciole Regular"),
+      local("Luciole-Regular"),
+      url('public/Luciole_webfonts/Luciole-Regular/Luciole-Regular.woff') format('woff'), /* Modern Browsers */
+      url('public/Luciole_webfonts/Luciole-Regular/Luciole-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('public/Luciole_webfonts/Luciole-Regular/Luciole-Regular.svg#Luciole-Regular') format('svg'), /* Legacy iOS */
+      url('public/Luciole_webfonts/Luciole-Regular/Luciole-Regular.woff2') format('woff2'); /* Modern Browsers */  
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Luciole';
+  src: local("Luciole Italic"),
+      local("Luciole-Italic"),
+      url('public/Luciole_webfonts/Luciole-Italic/Luciole-Italic.woff') format('woff'), /* Modern Browsers */
+      url('public/Luciole_webfonts/Luciole-Italic/Luciole-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('public/Luciole_webfonts/Luciole-Italic/Luciole-Italic.svg#Luciole-Italic') format('svg'), /* Legacy iOS */
+      url('public/Luciole_webfonts/Luciole-Italic/Luciole-Italic.woff2') format('woff2'); /* Modern Browsers */  
+  font-style: italic;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Luciole';
+  src: local("Luciole Bold"),
+      local("Luciole-Bold"),
+      url('public/Luciole_webfonts/Luciole-Bold/Luciole-Bold.woff') format('woff'), /* Modern Browsers */
+      url('public/Luciole_webfonts/Luciole-Bold/Luciole-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('public/Luciole_webfonts/Luciole-Bold/Luciole-Bold.svg#Luciole-Bold') format('svg'), /* Legacy iOS */
+      url('public/Luciole_webfonts/Luciole-Bold/Luciole-Bold.woff2') format('woff2'); /* Modern Browsers */  
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: 'Luciole';
+  src: local("Luciole Bold"),
+      local("Luciole-Bold"),
+      url('public/Luciole_webfonts/Luciole-BoldItalic/Luciole-BoldItalic.woff') format('woff'), /* Modern Browsers */
+      url('public/Luciole_webfonts/Luciole-BoldItalic/Luciole-BoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('public/Luciole_webfonts/Luciole-BoldItalic/Luciole-BoldItalic.svg#Luciole-BoldItalic') format('svg'), /* Legacy iOS */
+      url('public/Luciole_webfonts/Luciole-BoldItalic/Luciole-BoldItalic.woff2') format('woff2'); /* Modern Browsers */  
+  font-style: italic;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Luciole';
+  margin: 0px;
+}
+
+h1 {
+  font-size: 10px;
+}
