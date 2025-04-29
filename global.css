@@ -63,3 +63,8 @@ body {
 h1 {
   font-size: 10px;
 }
+
+.service-details {
+  display: block;
+  width: 100%;
+}
