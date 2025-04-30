@@ -13,89 +13,91 @@
 </head>
 <body>
     <div class="bg-gray-700">
-        <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">YTEXO - Solutions administratives</span>
+            </a>
+          </div>
+          <div class="flex lg:hidden ">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" id="menu-button">
+              <span class="sr-only">Open main menu</span>
+              <svg class="h-6 w-6 m-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a href="/" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Accueil</a>
+            <a href="/#apropos" class="text-xs font-semibold leading-6 text-white hover:text-red-700">A propos</a>
+            <a href="/#services" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Expertises</a>
+            <a href="/#formules" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Formules</a>
+            <a href="/#outils" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Outils</a>
+            <a href="/#contact" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Contact</a>
+          </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div id="mobile-menu" class="hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
               <a href="#" class="-m-1.5 p-1.5">
                 <span class="sr-only">YTEXO - Solutions administratives</span>
               </a>
-            </div>
-            <div class="flex lg:hidden ">
-              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white" id="menu-button">
-                <span class="sr-only">Open main menu</span>
-                <svg class="h-6 w-6 m-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              <button type="button" class="m-2.5 rounded-md p-2.5 text-white" id="menu-button-close">
+                <span class="sr-only h-6 w-6">Close menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-              <a href="/" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Accueil</a>
-              <a href="/#Apropos" class="text-xs font-semibold leading-6 text-white hover:text-red-700">A propos</a>
-              <a href="/#services" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Expertises</a>
-              <a href="/#Outils" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Outils</a>
-              <a href="/#contact" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Contact</a>
-            </div>
-          </nav>
-          <!-- Mobile menu, show/hide based on menu open state. -->
-          <div id="mobile-menu" class="hidden" role="dialog" aria-modal="true">
-            <!-- Background backdrop, show/hide based on slide-over state. -->
-            <div class="fixed inset-0 z-50"></div>
-            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-              <div class="flex items-center justify-between">
-                <a href="#" class="-m-1.5 p-1.5">
-                  <span class="sr-only">YTEXO - Solutions administratives</span>
-                </a>
-                <button type="button" class="m-2.5 rounded-md p-2.5 text-white" id="menu-button-close">
-                  <span class="sr-only h-6 w-6">Close menu</span>
-                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-              <div class="mt-6 flow-root">
-                <div class="-my-6 divide-y divide-gray-500/10">
-                  <div class="space-y-2 py-6">
-                    <a href="/" id="menu-button-close-2" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Accueil</a>
-                    <a href="/#Apropos" id="menu-button-close-3" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">A propos</a>
-                    <a href="/#services" id="menu-button-close-4" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Expertises</a>
-                    <a href="/#Outils" id="menu-button-close-5" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Outils</a>
-                    <a href="/#contact" id="menu-button-close-6" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Contact</a>
-                  </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a href="/" id="menu-button-close-2" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Accueil</a>
+                  <a href="/#apropos" id="menu-button-close-3" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">A propos</a>
+                  <a href="/#services" id="menu-button-close-4" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Expertises</a>
+                  <a href="/#formules" id="menu-button-close-4" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Formules</a>
+                  <a href="/#outils" id="menu-button-close-5" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Outils</a>
+                  <a href="/#contact" id="menu-button-close-6" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Contact</a>
                 </div>
               </div>
             </div>
           </div>
-        </header>
-        <div class="min-[320px]:px-5 md:px-2 relative h-screen isolate pt-14 md:bg-gray-700 md:bg-cover">
-          <div class="sm:mx-12 lg:mx-48 max-w-2xl py-16 sm:py-48 lg:py-56">
-            <div>
-              <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">YTEXO - Solutions Administratives</h1>
-              <p class="min-[320px]:max-w-[90%] mt-6 text-base leading-8 text-white">Conseil et support administratif, comptable et HR pour entreprises</p>
-              <div class="mt-10 flex items-center gap-x-6">
-                <a href="#contact" class="rounded-md px-3.5 py-2.5 text-xs font-semibold text-white shadow-sm bg-red-700 hover:bg-red-500">
-                  Contact
-                </a>
-              </div>
+        </div>
+      </header>
+      <div class="min-[320px]:px-5 md:px-2 relative h-screen isolate pt-14 md:bg-gray-700 md:bg-cover">
+        <div class="sm:mx-12 lg:mx-48 max-w-2xl py-16 sm:py-48 lg:py-56">
+          <div>
+            <h1 class="text-balance text-4xl font-bold tracking-tight text-white sm:text-6xl">YTEXO - Solutions Administratives</h1>
+            <p class="min-[320px]:max-w-[90%] mt-6 text-base leading-8 text-white">Conseil et support administratif, comptable et HR pour entreprises</p>
+            <div class="mt-10 flex items-center gap-x-6">
+              <a href="#contact" class="rounded-md px-3.5 py-2.5 text-xs font-semibold text-white shadow-sm bg-red-700 hover:bg-red-500">
+                Contact
+              </a>
             </div>
           </div>
-          <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-            <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-          </div>
         </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+          <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        </div>
+      </div>
     </div>
-    <section class="min-[320px]:px-2 sm:px-12 lg:px-48 lg:my-12 pt-6 pb-6">
-        <div id="Apropos" class="min-[320px]:flex-col sm:flex-row flex items-center lg:my-6">
+    <section id="apropos" class="min-[320px]:px-2 sm:px-12 lg:px-48 lg:my-12 pt-6 pb-6">
+        <div class="min-[320px]:flex-col sm:flex-row flex items-center lg:my-6">
             <img class="rounded-full min-[320px]:h-48 min-[320px]:w-48 sm:h-40 sm:w-40 sm:mx-12 min-[320px]:mx-auto" src="./public/YTEXO_LOGO_transparent.png" alt="Logo YTEXO - support administratif Liège">
             <p class="text-sm leading-8 text-gray-700 lg:max-w-[80%] min-[320px]:max-w-full min-[320px]:py-12 sm:py-0 mb-2 mx-2">
               Ressources humaines, comptabilité, subsides, législations fiscales et sociales, réglementations… La gestion administrative des entreprises devient chaque jour plus complexe et plus contraignante. YTEXO en a fait sa spécialité et propose aux entreprises un accompagnement en gestion administratives. Nous gérons, organisons et informatisons avec professionnalisme et rigueur votre complexité administrative.
             </p>
         </div>
     </section>
-    <section class="min-[320px]:px-2 sm:px-12 lg:px-48 lg:py-24 py-12 bg-red-700 bg-cover">
-      <h2 id="services" class="text-4xl leading-8 text-white pb-6">Nos services</h2>
-      <div class="flex flex-row gap-x-4 min-[320px]:flex-wrap lg:flex-nowrap">
+    <section id="services" class="min-[320px]:px-5 sm:px-12 lg:px-48 lg:py-24 py-12 bg-red-700 bg-cover">
+      <h2 class="text-4xl leading-8 text-white pb-6">Nos services</h2>
+      <div class="flex min-[320px]:flex-col sm:flex-row gap-x-4 min-[320px]:flex-wrap lg:flex-nowrap">
           <div 
-            class="service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] w-[33%] flex flex-col"
+            class="min-[320px]:my-2 service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] min-[320px]:w-full sm:w-[33%] flex flex-col "
             data-service="social"
           >
               <div class="p-5 flex flex-col items-center w-full">
@@ -105,13 +107,13 @@
                   </svg>
                 </div>
                 <h3 class="text-sm text-red-700 min-h-[20%] mt-2">Administration sociale et RH</h3>
-                <p class="text-xs mb-2">Gestion journalière de vos RH en collaboration avec votre secrétariat social.Nous collaboration avec votre secrétariat social pour assurer votre gestion administrative journalière.
-                  <a class="text-blue-700! text-xs" href="tel:+1 (555) 234-5678">En savoir plus...</a>
+                <p class="text-xs mb-2 text-gray-700">Gestion journalière de vos RH en collaboration avec votre secrétariat social.Nous collaboration avec votre secrétariat social pour assurer votre gestion administrative journalière.
+                  <span class="text-blue-700! text-xs">En savoir plus...</span></p>
                 </p>
               </div>
           </div>
           <div 
-            class="service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] w-[33%] flex flex-col"
+            class="min-[320px]:my-2 service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] min-[320px]:w-full sm:w-[33%] flex flex-col"
             data-service="finance">
               <div class="p-5 flex flex-col items-center w-full">
                 <div class="bg-red-700 rounded-lg p-2">
@@ -120,13 +122,13 @@
                   </svg>                  
                 </div>
                 <h3 class="text-sm text-red-700 pb-2 min-h-[20%] mt-2">Administration financière</h3>
-                <p class="text-xs">Nous connaissons bien les outils et les métiers du chiffre et mettons cette expertise à votre service. En collaboration avec votre fiduciaire, nos équipes assurent la gestion administrative des éléments financiers et comptables.
-                  <a class="text-blue-700! text-xs" href="tel:+1 (555) 234-5678">En savoir plus...</a>
+                <p class="text-xs text-gray-700">Nous connaissons bien les outils et les métiers du chiffre et mettons cette expertise à votre service. En collaboration avec votre fiduciaire, nos équipes assurent la gestion administrative des éléments financiers et comptables.
+                  <span class="text-blue-700! text-xs">En savoir plus...</span></p>
                 </p>
               </div>
           </div>
           <div 
-            class="service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] w-[33%] flex flex-col"
+            class="min-[320px]:my-2 service-bloc bg-white rounded-md border border-gray-100 rounded-lg min-h-[200px] min-[320px]:w-full sm:w-[33%] flex flex-col"
             data-service="subsides">
               <div class="p-5 flex flex-col items-center w-full">
                 <div class="bg-red-700 rounded-lg p-2">
@@ -135,15 +137,99 @@
                   </svg>  
                 </div>
                 <h3 class="text-sm text-red-700 mt-2 pb-2 min-h-[20%] mt-2">Subsides</h3>
-                <p class="text-xs">Nous vérifions les subsides auxquels vous avez droit et nous faisons la demande auprès de l’administration compétente si cela n’a pas été fait. 
-                  <a class="text-blue-700! text-xs" href="tel:+1 (555) 234-5678">En savoir plus...</a>
-                </p>
+                <p class="text-xs text-gray-700">Nous vérifions les subsides auxquels vous avez droit et nous faisons la demande auprès de l’administration compétente si cela n’a pas été fait. <span class="text-blue-700! text-xs">En savoir plus...</span></p> 
+                
+                
               </div>  
           </div>
         </div>
     </section>
-    <section id="Outils" class="min-[320px]:px-2 lg:px-48 lg:mb-12 flex flex-row items-center gap-x-8 py-12">
-      <div class="max-w-[50%]">
+    <section id="formules">
+      <div class="bg-gray-50 py-24 sm:py-32">
+        <div class="mx-auto px-6 lg:max-w-7xl lg:px-8">
+          <h2 class="text-4xl leading-8 text-gray-700 pb-6">Nos formules</h2>
+          <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+              <div class="relative h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p class="mt-2 text-lg font-bold text-gray-700 max-lg:text-center">Gestion</p>
+                  <p class="text-sm text-gray-700">Dès 576€/mois</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Nos experts gèrent l’administration HR, comptable et légale de votre
+                    entreprise. Vos comptes sont à jours, vos contrats en ordre, vos obligations légales
+                    couvertes.
+                  </p>
+                </div>
+                <div class="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                  <div class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw]">
+                    <img class="size-full object-cover object-top" src="./public/YTEXO_people.png" alt="Ytexo_administration_image">
+                  </div>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
+            </div>
+            <div class="relative max-lg:row-start-1">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg font-bold text-gray-700 max-lg:text-center">Optimisation</p>
+                  <p class="text-sm text-gray-700">Dès 576€/mois</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Nos experts parcourent vos processus administratifs pour en réduire les
+                    coûts et les frais. Ils chassent les primes, subissent, tarifs avantageux et autres optimisations
+                    pour réduire au maximum vos coûts administratifs
+                  </p>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
+            </div>
+            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+              <div class="absolute inset-px rounded-lg bg-white"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg tracking-tight font-bold text-gray-700 max-lg:text-center">Organisation</p>
+                  <p class="text-sm text-gray-700">Dès 576€/mois</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Notre équipe étudie vos processus et systèmes administratifs pour les
+                    optimiser. Automatisation, informatisation, organisation… nous mettons tout en place pour
+                    que votre administration soit plus simple et plus efficace.
+                  </p>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5"></div>
+            </div>
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+              <div class="relative h-full flex flex-col space-between overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                  <p class="mt-2 text-lg font-bold tracking-tight text-gray-700 max-lg:text-center">Support</p>
+                  <p class="text-sm text-gray-700">Dès 68€/heure</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Notre équipe intervient opérationnellement et répondent à vos questions
+                    administratives, sociales et comptables. Pas d’engagement compliqué mais une équipe à
+                    disposition pour les coups dur et les mois plus compliqués.
+                  </p>
+                </div>
+                <div class="relative min-h-[30rem] w-full grow">
+                  <div class="absolute bottom-0 mx-12 top-10 overflow-hidden rounded-tl-xl bg-white">
+                      <div class="-mb-px flex text-sm/6 font-medium text-gray-400">
+                        <img 
+                          class="size-full object-cover object-top" 
+                          src="./public/YTEXO_support.png" 
+                          alt="Ytexo_support_image">
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
+            </div>
+          </div>
+        </div>
+      </div>      
+    </section>
+    <section id="outils" class="min-[320px]:px-5 lg:px-48 lg:mb-12 flex min-[320px]:flex-col sm:flex-row gap-x-8 py-12">
+      <div class="min-[320px]:w-full sm:max-w-[50%] min-[320px]:pb-5 ">
         <h2 class="text-4xl leading-8 text-gray-600 my-6">A propos de nous</h2>
         <p class="text-sm leading-8 text-gray-600">
           Ytexo est le fruit de 15 ans d’expériences en tant que directeur ou responsable des
@@ -152,9 +238,9 @@
           de PME. C’est la fusion de ces deux pans qui rend Ytexo aussi polyvalent et efficace.
         </p>
       </div>
-      <div class="max-w-[50%]">
+      <div class="min-[320px]:w-full sm:max-w-[50%]">
         <h2 class="text-4xl leading-8 text-gray-600 my-6">Nos outils et partenaires</h2>  
-        <p class="text-sm leading-8 text-gray-600 lg:max-w-[80%] min-[320px]:max-w-full min-[320px]:py-12 sm:py-0 mb-2 mx-2">
+        <p class="text-sm leading-8 text-gray-600">
           Qu'ils soient ceux de votre comptable, de votre secrétariat social ou vos outils personnels, nous maitrisons de nombreux outils: HORUS, Odoo, SAGE, PARTENA, ACERTA, SECUREX, LIANTIS, SD WORX, ProSalary...
           Pas besoin de formation... nous les connaissons déjà.
         </p>
@@ -165,9 +251,10 @@
             <h2 class="text-4xl leading-8 text-white pb-6">Contact</h2>
         </div>
         <div class="sm:flex justify-center pb-12 lg:pb-24">
-            <form action="https://formsubmit.co/9dbbe7904e29a06bcca6b791915353a8" method="POST" class="px-6 mx-6">
+            <form action="https://formsubmit.co/f475e4abf9cce8d4c5ed2d2594143f2b" method="POST" class="px-6 mx-6">
                 <div class="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-                    <input type="hidden" name="_subject" value="Message du site de Ytexo">
+                    <input type="hidden" name="_subject" value="Nouveau mail du site Ytexo">
+                    <input type="hidden" name="_next" value="https://ytexo.be/thankYou.html">
                     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                         <div>
                           <div class="mt-2.5">
