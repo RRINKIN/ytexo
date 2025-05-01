@@ -116,3 +116,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Script for FAQ collapse / extend
+document.addEventListener('DOMContentLoaded', () => {
+    const faqList = document.getElementById('faq-list');
+    const faqItems = faqList.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const button = item.querySelector('.faq-button');
+        const answer = item.querySelector('.faq-answer');
+        const openIcon = item.querySelector('.open-icon');
+        const closeIcon = item.querySelector('.close-icon');
+
+        button.addEventListener('click', () => {
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            button.setAttribute('aria-expanded', !isExpanded);
+            answer.classList.toggle('hidden', isExpanded);
+            openIcon.classList.toggle('hidden', !isExpanded);
+            closeIcon.classList.toggle('hidden', isExpanded);
+        });
+    });
+});
