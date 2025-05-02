@@ -38,7 +38,7 @@
             <a href="/#apropos" class="text-xs font-semibold leading-6 text-white hover:text-red-700">A propos</a>
             <a href="/#services" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Expertises</a>
             <a href="/#formules" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Formules</a>
-            <a href="/#outils" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Outils</a>
+            <a href="/#FAQ" class="text-xs font-semibold leading-6 text-white hover:text-red-700">FAQ</a>
             <a href="/#contact" class="text-xs font-semibold leading-6 text-white hover:text-red-700">Contact</a>
           </div>
         </nav>
@@ -65,7 +65,7 @@
                   <a href="/#apropos" id="menu-button-close-3" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">A propos</a>
                   <a href="/#services" id="menu-button-close-4" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Expertises</a>
                   <a href="/#formules" id="menu-button-close-4" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Formules</a>
-                  <a href="/#outils" id="menu-button-close-5" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Outils</a>
+                  <a href="/#FAQ" id="menu-button-close-5" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">FAQ</a>
                   <a href="/#contact" id="menu-button-close-6" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-700">Contact</a>
                 </div>
               </div>
@@ -231,8 +231,8 @@
         </div>
       </div>      
     </section>
-    <section id="outils" class="min-[320px]:px-5 lg:px-48 lg:mb-12 flex min-[320px]:flex-col sm:flex-row gap-x-8 py-12">
-      <div class="min-[320px]:w-full sm:max-w-[50%] min-[320px]:pb-5 ">
+    <section id="FAQ" class="bg-white flex min-[320px]:flex-col sm:flex-row my-24 min-[320px]:mx-5 sm:mx-24">
+      <div class="min-[320px]:w-full sm:max-w-[30%] min-[320px]:mb-10 sm:mb-0 px-6">
         <h2 class="text-4xl leading-8 text-gray-600 my-6">A propos de nous</h2>
         <p class="text-sm leading-8 text-gray-600">
           Ytexo est le fruit de 15 ans d’expériences en tant que directeur ou responsable des
@@ -241,19 +241,29 @@
           de PME. C’est la fusion de ces deux pans qui rend Ytexo aussi polyvalent et efficace.
         </p>
       </div>
-      <div class="min-[320px]:w-full sm:max-w-[50%]">
-        <h2 class="text-4xl leading-8 text-gray-600 my-6">Nos outils et partenaires</h2>  
-        <p class="text-sm leading-8 text-gray-600">
-          Qu'ils soient ceux de votre comptable, de votre secrétariat social ou vos outils personnels, nous maitrisons de nombreux outils: HORUS, Odoo, SAGE, PARTENA, ACERTA, SECUREX, LIANTIS, SD WORX, ProSalary...
-          Pas besoin de formation... nous les connaissons déjà.
-        </p>
-      </div>
-    </section>
-    <section id="FAQ" class="bg-gray-50">
-      <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-20">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="mx-auto max-w-4xl">
               <h2 class="text-4xl leading-8 text-gray-700 pb-6">Encore d'autres questions ?</h2>
               <dl class="mt-16 divide-y divide-gray-900/10" id="faq-list">
+                  <div class="py-6 first:pt-0 last:pb-0 faq-item">
+                      <dt>
+                          <button type="button" class="flex w-full items-start justify-between text-left text-gray-900 faq-button" aria-controls="faq-answer-0" aria-expanded="true">
+                              <span class="text-sm font-semibold text-gray-700">Quels outils maitrisons nous ?</span>
+                              <span class="ml-6 flex h-7 items-center faq-icon">
+                                  <svg class="size-6 open-icon hidden" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                                  </svg>
+                                  <svg class="size-6 close-icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                                  </svg>
+                              </span>
+                          </button>
+                      </dt>
+                      <dd class="mt-2 pr-12 faq-answer" id="faq-answer-0">
+                          <p class="text-sm text-gray-600">Qu'ils soient ceux de votre comptable, de votre secrétariat social ou vos outils personnels, nous maitrisons de nombreux outils: HORUS, Odoo, SAGE ou ProSalary. Nous maitrisons également parfaitement les outils de la majorité des secrétariats sociaux Belges tels que PARTENA, ACERTA, SECUREX, LIANTIS ou SD WORX.
+                            Nous les utilisons tous les jours donc pas besoin de formation... nous sommes immédiatement opérationnels.</p>
+                      </dd>
+                  </div>
                   <div class="py-6 first:pt-0 last:pb-0 faq-item">
                       <dt>
                           <button type="button" class="flex w-full items-start justify-between text-left text-gray-900 faq-button" aria-controls="faq-answer-0" aria-expanded="false">
